@@ -14,5 +14,6 @@ public class PlayerController : MonoBehaviour {
 		float mod = speed * Time.deltaTime;
 		GetComponent<Rigidbody2D>().AddForce(new Vector3(Input.GetAxis("Horizontal") * mod, Input.GetAxis("Vertical") * mod, 0f));
 		//transform.Translate(Input.GetAxis("Horizontal") * mod, Input.GetAxis("Vertical") * mod, 0f);
+		// this is a stupid comment
 	}
 }

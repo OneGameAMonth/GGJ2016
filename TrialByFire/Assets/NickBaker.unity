@@ -384,7 +384,7 @@ GameObject:
   - 212: {fileID: 277633037}
   - 61: {fileID: 277633036}
   m_Layer: 0
-  m_Name: MazeTorch
+  m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

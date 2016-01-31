@@ -1,32 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pressure_Plate : MonoBehaviour {
-
+public class MazePressurePlate : MonoBehaviour {
+	
 	public GameObject torchObj;
+	public GameObject maze1;
+	public GameObject maze2;
 	private SpriteRenderer torchRenderer;
-
+	
 	// Use this for initialization
 	void Start () {
 		torchRenderer = torchObj.GetComponent<SpriteRenderer>();
-		torchRenderer.enabled = false;
+		maze1.SetActive(true);
+		maze2.SetActive(false);
+		torchObj.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
+	
 	//Sense when a weighted object is pressing down
 	void OnTriggerExit2D(Collider2D other) {
 		if( torchRenderer != null ){ 
-			torchRenderer.enabled = false;
+			torchObj.SetActive (false);
+			maze2.SetActive(false);
+			maze1.SetActive(true);
 		}
 	}
 	void OnTriggerStay2D(Collider2D other) {
 		if( torchRenderer != null ){ 
-			torchRenderer.enabled = true;
+			torchObj.SetActive (true);
+			maze2.SetActive(true);
+			maze1.SetActive(false);
 		}
 	}
-
+	
 }

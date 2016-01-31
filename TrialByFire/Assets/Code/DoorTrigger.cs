@@ -4,14 +4,21 @@ using System.Collections;
 public class DoorTrigger : MonoBehaviour {
 
 	public GameObject spawnPoint;
-	public Camera main;
+    public Camera main;
 
 	void OnTriggerEnter2D(Collider2D other) {
 		//Debug.Log("collision");
 		//Destroy(other.gameObject);
 		//other.transform.Translate (new Vector2 (10.0f, 0f));
 		other.transform.position = spawnPoint.transform.position;
-		main.transform.Translate (new Vector2 (12.9f, 0f));
+        if (gameObject.tag == "TopDoor")
+        {
+            main.transform.Translate(new Vector2(12.9f, 0f));
+        }
+		else if(gameObject.tag == "BottomDoor")
+        {
+            main.transform.Translate(new Vector2(-12.9f, 0f));
+        }
 	}
 
 	// Use this for initialization

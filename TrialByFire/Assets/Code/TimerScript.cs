@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TimerScript : MonoBehaviour {
 
-	float initialTime = 60f;
+	float initialTime = 240f;
 	float timeLeft;
 	Vector2 originalScale;
 

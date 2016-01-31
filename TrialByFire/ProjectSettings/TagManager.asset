@@ -9,6 +9,7 @@ TagManager:
   - RedBar
   - Room1
   - Room2
+  - Room3
   layers:
   - Default
   - TransparentFX

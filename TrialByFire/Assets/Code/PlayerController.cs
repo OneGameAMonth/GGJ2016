@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		if( coll.gameObject.name == "Bonfire" && isCarryingTorch == true){
 			//swap the sprite on the bonfire to the lit sprite
-			gameObject.getComponent<Renderer>()
+			//gameObject.getComponent<Renderer>()
 			isCarryingTorch = false;
 		}
 	}

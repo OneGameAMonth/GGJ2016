@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TopDoor
   - BottomDoor
+  - RedBar
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour {
 	public Animator anim;
 	public float speed;
 	public bool carryingTorch = false;
+	public AudioSource torchGet1;
+	public AudioSource torchGet2;
+	public AudioSource fireStart;
 	// Use this for initialization
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
@@ -28,7 +31,9 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		GameObject gObj = coll.gameObject;
 		if( gObj.name == "Torch" ){
-			Destroy(coll.gameObject);
+			coll.gameObject.SetActive(false);
+			if(Random.value > 0.95f){torchGet2.Play();}
+			else{torchGet1.Play();}
 			carryingTorch = true;
 		}
 		if( gObj.name == "Bonfire" && carryingTorch == true){

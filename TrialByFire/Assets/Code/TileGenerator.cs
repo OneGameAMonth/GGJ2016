@@ -15,8 +15,9 @@ public class TileGenerator : MonoBehaviour {
 
 		foreach(Tile tile in tileList){
 			tile.SetTileNum(index);
+			if(Random.value > 0.5f){ tile.SetTileType(1); }
+			else{ tile.SetTileType(3); }
 			tile.IsTargetTile(index == targetTile);
-			tile.SetTileType( 1 + (int)(Random.value * 3));
 			index++;
 		}
 	}

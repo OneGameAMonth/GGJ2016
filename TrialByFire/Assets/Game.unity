@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
+  isCarryingTorch: 0
 --- !u!61 &495812635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -443,7 +444,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1379303834}
   - 212: {fileID: 1379303836}
-  - 114: {fileID: 1379303835}
+  - 61: {fileID: 1379303835}
   m_Layer: 0
   m_Name: Torch2
   m_TagString: Untagged
@@ -463,17 +464,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1248360550}
   m_RootOrder: 2
---- !u!114 &1379303835
-MonoBehaviour:
+--- !u!61 &1379303835
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1379303833}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae131ae0e378074b905be6e01e073bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6}
 --- !u!212 &1379303836
 SpriteRenderer:
   m_ObjectHideFlags: 0

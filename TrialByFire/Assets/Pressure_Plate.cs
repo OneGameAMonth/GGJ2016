@@ -19,10 +19,10 @@ public class Pressure_Plate : MonoBehaviour {
 
 	//Sense when a weighted object is pressing down
 	void OnTriggerExit2D(Collider2D other) {
-		torchRenderer.enabled = false;
+		if( torchRenderer != null ){ torchRenderer.enabled = false; }
 	}
 	void OnTriggerStay2D(Collider2D other) {
-		torchRenderer.enabled = true;
+		if( torchRenderer != null ){ torchRenderer.enabled = true; }
 	}
 
 }

@@ -20,7 +20,7 @@ public class Stone : MonoBehaviour {
 			thisIsTheFinalCountdown -= Time.deltaTime;
 		}
 
-		char[] inputArr = {'s', 's', 'a', 'd', 's'};
+		char[] inputArr = {'w', 's', 'a', 'd', 's', 's'};
 
 		if (Input.anyKeyDown) {
 			bool condition = (thisIsTheFinalCountdown > 0 || keyComboStep == 0 ) && Input.GetKeyDown( inputArr[keyComboStep].ToString() );

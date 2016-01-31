@@ -13,10 +13,12 @@ public class DoorTrigger : MonoBehaviour {
 		other.transform.position = spawnPoint.transform.position;
         if (gameObject.tag == "TopDoor")
         {
+            Debug.Log("TopDoorCollision");
             main.transform.Translate(new Vector2(12.9f, 0f));
         }
 		else if(gameObject.tag == "BottomDoor")
         {
+            Debug.Log("BottomDoorCollision");
             main.transform.Translate(new Vector2(-12.9f, 0f));
         }
 	}
